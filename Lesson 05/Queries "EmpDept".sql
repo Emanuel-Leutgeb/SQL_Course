@@ -1,37 +1,44 @@
---12
-select *
-from emp
-where deptno = 30
-order by sal desc;
---13
-select *
-from emp
-order by job, sal;
---14
-select *
-from emp
-order by extract(year from to_date(hiredate, 'DD-MM-YYYY')) desc, ename;
---15
-select *
-from emp
-where job = 'SALESMAN'
-order by comm / sal;
---16
-select avg(sal), deptno
-from emp
-group by deptno;
---17
-select 12 * avg(sal), job
-from emp
-group by job
-having count(*) > 2;
---18
-select deptno
-from emp
-where job = 'CLERK'
-group by deptno
-having count(*) >= 2;
---19
-select avg(comm + sal)
-from emp
-where deptno = 30;
+/*Query 12*/
+SELECT *
+FROM EMP
+WHERE DEPTNO = 30
+ORDER BY SAL DESC;
+
+/*Query 13*/
+SELECT *
+FROM EMP
+ORDER BY JOB, SAL DESC;
+
+/*Query 14*/
+SELECT *
+FROM EMP
+ORDER BY EXTRACT(YEAR FROM TO_DATE(HIREDATE, 'DD-MM-YYYY')) DESC, ENAME;
+
+/*Query 15*/
+SELECT *
+FROM EMP
+WHERE JOB = 'SALESMAN'
+ORDER BY COMM / SAL DESC;
+
+/*Query 16*/
+SELECT ROUND(AVG(SAL), 2), DEPTNO
+FROM EMP
+GROUP BY DEPTNO;
+
+/*Query 17*/
+SELECT 12 * AVG(SAL), JOB
+FROM EMP
+GROUP BY JOB
+HAVING COUNT(*) > 2;
+
+/*Query 18*/
+SELECT DEPTNO
+FROM EMP
+WHERE JOB = 'CLERK'
+GROUP BY DEPTNO
+HAVING COUNT(*) >= 2;
+
+/*Query 19*/
+SELECT AVG(COMM + SAL)
+FROM EMP
+WHERE DEPTNO = 30;

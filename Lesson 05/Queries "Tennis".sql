@@ -1,5 +1,5 @@
 /*Query 01*/
-SELECT YEAR_JOINED, COUNT(*)
+SELECT COUNT(*), YEAR_JOINED
 FROM PLAYERS
 GROUP BY YEAR_JOINED;
 
@@ -9,10 +9,10 @@ FROM PENALTIES
 GROUP BY PLAYERNO;
 
 /*Query 03*/
-SELECT PLAYERNO, COUNT(*)
+SELECT EXTRACT(YEAR FROM TO_DATE(PEN_DATE, 'DD-MM-YYYY')), COUNT(*)
 FROM PENALTIES
 WHERE EXTRACT(YEAR FROM TO_DATE(PEN_DATE, 'DD-MM-YYYY')) < 1983
-GROUP BY PLAYERNO;
+GROUP BY EXTRACT(YEAR FROM TO_DATE(PEN_DATE, 'DD-MM-YYYY'));
 
 /*Query 04*/
 SELECT TOWN, COUNT(*)
@@ -47,29 +47,29 @@ FROM PENALTIES,
 WHERE AMOUNT > 40
   AND PLAYERS.PLAYERNO = PENALTIES.PLAYERNO
 GROUP BY NAME, INITIALS, PENALTIES.PLAYERNO
-HAVING COUNT(*) >= 2;
+HAVING COUNT(*) > 1;
 
 /*Query 09*/
-select name, initials
-from penalties,
-     players
-where players.playerno = penalties.playerno
-group by name, initials
-having sum(penalties.amount) >= all
-       (select sum(amount)
-        from penalties
-        group by playerno);
+SELECT NAME, INITIALS
+FROM PENALTIES,
+     PLAYERS
+WHERE PLAYERS.PLAYERNO = PENALTIES.PLAYERNO
+GROUP BY NAME, INITIALS
+HAVING SUM(PENALTIES.AMOUNT) >= ALL
+       (SELECT SUM(AMOUNT)
+        FROM PENALTIES
+        GROUP BY PLAYERNO);
 
 /*Query 10*/
-select extract(YEAR from TO_DATE(pen_date, 'DD-MM-YYYY')), count(*)
-from penalties
-group by pen_date
-having count(*) >= all
-       (select count(*)
-        from penalties
-        group by pen_date);
+SELECT EXTRACT(YEAR FROM TO_DATE(PEN_DATE, 'DD-MM-YYYY')), COUNT(*)
+FROM PENALTIES
+GROUP BY PEN_DATE
+HAVING COUNT(*) >= ALL
+       (SELECT COUNT(*)
+        FROM PENALTIES
+        GROUP BY PEN_DATE);
 
 /*Query 11*/
-select playerno, teamno, won, lost
-from matches
-order by lost desc;
+SELECT PLAYERNO, TEAMNO, WON, LOST
+FROM MATCHES
+ORDER BY LOST DESC;
