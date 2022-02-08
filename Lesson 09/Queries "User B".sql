@@ -1,0 +1,115 @@
+/*Queries 02*/
+/*User 02*/
+SET TRANSACTION NAME 'queries02UserB';
+
+UPDATE TEST
+SET LAST_NAME = 'Leutgeb'
+WHERE NAME_ID = 1;
+
+UPDATE TEST
+SET LAST_NAME = 'Reisenauer'
+WHERE NAME_ID = 4;
+
+COMMIT;
+--or...
+ROLLBACK;
+
+/*Queries 03*/
+/*User 02*/
+INSERT INTO TEST
+VALUES (7, 'Julia', 'Kaupert', 70);
+
+INSERT INTO TEST
+VALUES (8, 'David', 'Niedermaier', 80);
+
+SELECT *
+FROM TEST;
+
+COMMIT;
+
+SELECT *
+FROM TEST;
+
+/*Queries 04*/
+/*User 02*/
+SET TRANSACTION NAME 'queries04UserB';
+
+SELECT LAST_NAME
+FROM TEST
+WHERE NAME_ID = 2;
+
+UPDATE TEST
+SET LAST_NAME = 'Leutgeb'
+WHERE NAME_ID = 2;
+
+COMMIT;
+
+SELECT *
+FROM TEST;
+
+/*Queries 05*/
+/*User 02*/
+SET TRANSACTION NAME 'queries05UserB';
+
+INSERT INTO TEST
+VALUES (9, 'Rebekka', 'Leutgeb', 90);
+
+--
+
+ROLLBACK;
+
+/*Queries 06*/
+/*User 02*/
+SET TRANSACTION NAME 'queries06UserB';
+
+UPDATE TEST
+SET LAST_NAME = 'Leutgeb Forstinger'
+WHERE NAME_ID = 2;
+
+COMMIT;
+
+SELECT *
+FROM TEST;
+
+/*Queries 07*/
+/*User 02*/
+SET TRANSACTION NAME 'queries07UserB';
+
+UPDATE TEST
+SET VALUE = 300
+WHERE NAME_ID = 3;
+
+UPDATE TEST
+SET VALUE = 100
+WHERE NAME_ID = 1;
+
+SELECT *
+FROM TEST;
+
+COMMIT;
+
+/*Queries 08*/
+/*User 02*/
+SET TRANSACTION NAME 'queries08UserB';
+
+UPDATE TEST
+SET VALUE = 200
+WHERE VALUE = 20;
+
+COMMIT;
+
+/*Queries 09*/
+/*User 02*/
+CREATE TABLE USER_B
+(
+    ID   NUMBER(2) PRIMARY KEY,
+    ID_A NUMBER(2) CONSTRAINT ID_A REFERENCES USER_A (ID)
+);
+COMMIT;
+
+--
+
+INSERT INTO USER_B
+VALUES (01, 01);
+
+SET TRANSACTION NAME 'queries09UserB';
