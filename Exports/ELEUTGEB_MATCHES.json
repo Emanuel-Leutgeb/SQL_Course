@@ -1,0 +1,93 @@
+[
+  {
+    "MATCHNO": 1,
+    "TEAMNO": 1,
+    "PLAYERNO": 6,
+    "WON": 3,
+    "LOST": 1
+  },
+  {
+    "MATCHNO": 2,
+    "TEAMNO": 1,
+    "PLAYERNO": 6,
+    "WON": 2,
+    "LOST": 3
+  },
+  {
+    "MATCHNO": 3,
+    "TEAMNO": 1,
+    "PLAYERNO": 6,
+    "WON": 3,
+    "LOST": 0
+  },
+  {
+    "MATCHNO": 4,
+    "TEAMNO": 1,
+    "PLAYERNO": 44,
+    "WON": 3,
+    "LOST": 2
+  },
+  {
+    "MATCHNO": 5,
+    "TEAMNO": 1,
+    "PLAYERNO": 83,
+    "WON": 0,
+    "LOST": 3
+  },
+  {
+    "MATCHNO": 6,
+    "TEAMNO": 1,
+    "PLAYERNO": 2,
+    "WON": 1,
+    "LOST": 3
+  },
+  {
+    "MATCHNO": 7,
+    "TEAMNO": 1,
+    "PLAYERNO": 57,
+    "WON": 3,
+    "LOST": 0
+  },
+  {
+    "MATCHNO": 8,
+    "TEAMNO": 1,
+    "PLAYERNO": 8,
+    "WON": 0,
+    "LOST": 3
+  },
+  {
+    "MATCHNO": 9,
+    "TEAMNO": 2,
+    "PLAYERNO": 27,
+    "WON": 3,
+    "LOST": 2
+  },
+  {
+    "MATCHNO": 10,
+    "TEAMNO": 2,
+    "PLAYERNO": 104,
+    "WON": 3,
+    "LOST": 2
+  },
+  {
+    "MATCHNO": 11,
+    "TEAMNO": 2,
+    "PLAYERNO": 112,
+    "WON": 2,
+    "LOST": 3
+  },
+  {
+    "MATCHNO": 12,
+    "TEAMNO": 2,
+    "PLAYERNO": 112,
+    "WON": 1,
+    "LOST": 3
+  },
+  {
+    "MATCHNO": 13,
+    "TEAMNO": 2,
+    "PLAYERNO": 8,
+    "WON": 0,
+    "LOST": 3
+  }
+]

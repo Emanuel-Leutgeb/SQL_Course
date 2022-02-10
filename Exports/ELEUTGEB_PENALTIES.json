@@ -1,0 +1,50 @@
+[
+  {
+    "PAYMENTNO": 1,
+    "PLAYERNO": 6,
+    "PEN_DATE": "1980-12-08",
+    "AMOUNT": 100.00
+  },
+  {
+    "PAYMENTNO": 2,
+    "PLAYERNO": 44,
+    "PEN_DATE": "1981-05-05",
+    "AMOUNT": 75.00
+  },
+  {
+    "PAYMENTNO": 3,
+    "PLAYERNO": 27,
+    "PEN_DATE": "1983-09-10",
+    "AMOUNT": 100.00
+  },
+  {
+    "PAYMENTNO": 4,
+    "PLAYERNO": 104,
+    "PEN_DATE": "1984-12-08",
+    "AMOUNT": 50.00
+  },
+  {
+    "PAYMENTNO": 5,
+    "PLAYERNO": 44,
+    "PEN_DATE": "1980-12-08",
+    "AMOUNT": 25.00
+  },
+  {
+    "PAYMENTNO": 6,
+    "PLAYERNO": 8,
+    "PEN_DATE": "1980-12-08",
+    "AMOUNT": 25.00
+  },
+  {
+    "PAYMENTNO": 7,
+    "PLAYERNO": 44,
+    "PEN_DATE": "1982-12-30",
+    "AMOUNT": 30.00
+  },
+  {
+    "PAYMENTNO": 8,
+    "PLAYERNO": 27,
+    "PEN_DATE": "1984-12-12",
+    "AMOUNT": 75.00
+  }
+]
